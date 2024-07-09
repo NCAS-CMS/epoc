@@ -4,18 +4,26 @@
 
 Check the job.err file for the cause of the error. 
 
-* Timeouts, node failure, network error (e.g. `Fatal error in PMPI_Init_thread`), memory error (e.g. `Address not mapped to object.`)
-  * Just re-trigger the job. 
+Sometimes the issue is due to the machine, and the job can just be re-triggered. 
+Some examples of this are: 
+* Timeouts
+* Node failures
+* Network errors (e.g. `Fatal error in PMPI_Init_thread`)
+* Memory error (e.g. `Address not mapped to object.`)
 
-* `MPI_Abort` means the model failed: 
-  * Check model files for the source of error:
-  * NEMO errors appear in `work/<cycle>/coupled/ocean.output`
-  * UM errors appear in `work/<cycle>/coupled/pe_output/1.<suite-id>.fort6.pe0000`
-  * CICE errors appear in the `job.out`
- 
-Occasionally the HH model will become unstable, which also occurred in the original HighResMIP runs. 
+An `MPI_Abort` in the file means the model failed.
+This is usually due to an instability which occurs occasionally in this version of the model at high resolution.
+
+To see which component has caused the error: 
+* NEMO errors appear in `work/<cycle>/coupled/ocean.output`
+* UM errors appear in `work/<cycle>/coupled/pe_output/1.<suite-id>.fort6.pe0000`
+* CICE errors appear in the `job.out`
+
 See below for instructions on getting past these instabilities. 
 These should be documented in the suite page. 
+
+If these solutions do not work, you will need to go back and apply the remedies to the previous cycle. 
+See the [instructions for re-running the previous cycle](rerunning_cycles)
 
 ## NEMO instability
 
