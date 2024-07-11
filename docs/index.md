@@ -11,7 +11,8 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | Experiment | Ensemble number | Suite-id |
 | --- | --- | --- |
 | control-1950 | - | [u-cz422](suites/cz422) | 
-| hist-1950 | - | |
+| hist-1950 | 1 | |
+| hist-1950-noghg | 1 | |
 | abrupt 4xCO2 | 1 | [u-dg773](suites/dg773) |
 | abrupt 4xCO2 | 2 | [u-dh443](suites/dh443) |
 | abrupt 4xCO2 | 3 | |
@@ -21,7 +22,8 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | Experiment | Ensemble number | Suite-id |
 | --- | --- | --- |
 | control-1950 | - | [u-cx749](suites/cx749) | 
-| hist-1950 | - | |
+| hist-1950 | 1 | |
+| hist-1950-noghg | 1 | |
 | abrupt 4xCO2 | 1 | [u-dg290](suites/dg290) |
 | abrupt 4xCO2 | 2 | |
 | abrupt 4xCO2 | 3 | |
