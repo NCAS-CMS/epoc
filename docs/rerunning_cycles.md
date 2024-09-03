@@ -33,12 +33,13 @@ Go to `share/data/History_data/CICEhist`, and edit `ice.restart_file` to point t
 
 ## Cylc 
 
-You need to re-run the coupled task in cycle *N-1* and then cycle *N* to check you have got past the crash point. 
-All the post-processing tasks for cycle *N-1* then need to be re-run in order to fully process the new data. 
-It is best to pause the suite until this has completed. 
+The suite can get confused when re-running earlier cycles, especially with the post-processing. 
+Therefore it is important to hold the suite and re-run each task in order before continuing the run. 
 
-Follow the instructions carefully to ensure this is done correctly. 
-If in doubt ask Annette for guidance. 
+You will need to re-run the `coupled` task in cycle *N-1*, then cycle *N*, to check you have got past the crash point. 
+Then re-run all the post-processing tasks for cycle *N-1* to ensure the new data is processed. 
+
+Follow the instructions below carefully. If in doubt ask Annette for guidance. 
 
 1. Retrigger the `coupled` task for cycle *N-1*
 2. Reset all post-processing tasks in cycle *N-1* to waiting (so it's easier to see when tasks have been re-run).
@@ -52,5 +53,5 @@ If in doubt ask Annette for guidance.
    * `compress_netcdf`: This may not show up in the graph. To insert it run: `cylc insert SUITE-ID compress_netcdf.CYCLE-POINT`
    * `modify_netcdf_metadata` 
    * `pptransfer` 
-   * `jdma`: Check the old batch has been deleted first. If there is a delay here, you can proceed, but set jdma to failed first so we keep the task active and it's clear it needs to be re-run. 
+   * `jdma`: Check the old batch has been deleted first. If there is a delay here, you can proceed, but set `jdma` to failed first so we keep the task active and it's clear it needs to be re-run. 
 8. Once all tasks in cycle *N-1* have completed, release the suite to continue the run. 
