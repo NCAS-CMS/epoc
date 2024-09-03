@@ -33,20 +33,24 @@ Go to `share/data/History_data/CICEhist`, and edit `ice.restart_file` to point t
 
 ## Cylc 
 
-You will need to re-run all tasks, including post-processing for the cycle you are re-running (*N-1*)
-and these need to run before the tasks in cycle *N*. 
+You need to re-run the coupled task in cycle *N-1* and then cycle *N* to check you have got past the crash point. 
+All the post-processing tasks for cycle *N-1* then need to be re-run in order to fully process the new data. 
+It is best to pause the suite until this has completed. 
 
-Postproc and the ozone redistribution scheme can complicate things a bit, and ideally postproc should run straight after the coupled task. 
 Follow the instructions carefully to ensure this is done correctly. 
 If in doubt ask Annette for guidance. 
 
 1. Retrigger the `coupled` task for cycle *N-1*
-2. Pause `postproc` for cycle *N*.
-3. Reset all post-processing tasks in cycle *N-1* to waiting (so it's easier to see when tasks have been re-run). 
-4. If the JDMA task for *N-1* had completed, you will need to delete the data from JDMA. 
+2. Reset all post-processing tasks in cycle *N-1* to waiting (so it's easier to see when tasks have been re-run).
+3. Now pause the suite. 
+4. If the `jdma` task for *N-1* had completed, you will need to delete the data from JDMA. 
    It needs to finish uploading before it can be deleted. 
    If, for example, JDMA is down and the upload hasn't started you can get JASMIN to cancel the request from the queue. 
-5. Once coupled *N-1* has finished, manually trigger i) postproc for cycle *N-1* and ii) coupled for cycle *N*.
-6. Postproc may fail with an error like `ValueError: Incorrect size for fixed length header; given 0 words but should be 256.`. Have a look at the `*po` files in `History_Data`. Is there a zero-length `po` file from the month before (so cycle *N-2*)? If so delete this file and re-try. Do not delete any other files.  
-7. After these two tasks (postproc *N-1* and coupled *N*) have successfully completed, re-trigger the rest of the post-processing tasks for cycle *N-1* in order. You can check the graph view in cylc if in doubt. The `compress_netcdf` task may not show up, in which case you need to insert it first. 
-8. Once all tasks in cycle *N-1* have completed, un-pause `postproc` in cycle *N*, and the suite should continue on as normal. 
+5. Once `coupled` *N-1* has finished, manually trigger `coupled` for cycle *N*.
+6. Once this has completed, trigger all the post-processing tasks for cycle *N-1* in order: 
+   * `postproc`: This may fail with an error like `ValueError: Incorrect size for fixed length header; given 0 words but should be 256.`. Have a look at the `a.p4*` files in `History_Data`. Is there a zero-length file from the month before (so cycle *N-2*)? If so delete this file and re-try. Do not delete any other files.  
+   * `compress_netcdf`: This may not show up in the graph. To insert it run: `cylc insert SUITE-ID compress_netcdf.CYCLE-POINT`
+   * `modify_netcdf_metadata` 
+   * `pptransfer` 
+   * `jdma`: Check the old batch has been deleted first. If there is a delay here, you can proceed, but set jdma to failed first so we keep the task active and it's clear it needs to be re-run. 
+8. Once all tasks in cycle *N-1* have completed, release the suite to continue the run. 
