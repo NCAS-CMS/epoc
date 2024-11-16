@@ -16,6 +16,9 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | abrupt 4xCO2 | 1 | [u-dg773](suites/dg773) |
 | abrupt 4xCO2 | 2 | [u-dh773](suites/dh773) |
 | abrupt 4xCO2 | 3 | [u-di233](suites/di233) |
+| abrupt 4xCO2 | 4 | [u-dj758](suites/dj758) |
+| abrupt 4xCO2 | 5 | [u-dk751](suites/dk751) |
+
 
 ### HH suites
 
