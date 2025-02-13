@@ -36,8 +36,8 @@ Host sci-vm-0? sci-ph-0?
     ProxyJump login-03.jasmin.ac.uk
 ~~~
 {% endraw %}
-   * Replace the string `<JASMIN-USERNAME>` with your Jasmin username, e.g. `aosprey`.
-   * Replace <JASMIN-SSH-KEY> with the name of your Jasmin key, e.g. `id_rsa_jasmin`.
+   * Replace `<JASMIN-USERNAME>` with your Jasmin username, e.g. `aosprey`.
+   * Replace `<JASMIN-SSH-KEY>` with the name of your Jasmin key, e.g. `id_rsa_jasmin`.
      
 2. Add your Jasmin ssh-key to your ssh-agent:
    * Run `ssh-add ~/.ssh/<JASMIN-SSH-KEY>`
