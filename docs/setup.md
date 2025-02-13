@@ -22,6 +22,7 @@ In order to submit jobs to Jasmin from puma2 (for `jdma` and `monitor` tasks),
 you need to configure your ssh settings to connect to the Jasmin sci servers.   
 
 1. Add the following to your `.ssh/config` file on PUMA2.
+{% raw %}
 ~~~
 Host login-0?.jasmin.ac.uk
     User <JAMSIN-USERNAME>
@@ -34,7 +35,7 @@ Host sci-vm-0? sci-ph-0?
     ForwardAgent yes
     ProxyJump login-03.jasmin.ac.uk
 ~~~
-
+{% endraw %}
    * Replace the string `<JASMIN-USERNAME>` with your Jasmin username, e.g. `aosprey`.
    * Replace <JASMIN-SSH-KEY> with the name of your Jasmin key, e.g. `id_rsa_jasmin`.
      
@@ -47,12 +48,14 @@ Host sci-vm-0? sci-ph-0?
    * You should be logged into the Jasmin sci node without prompt for your passphrase.
      
 4. Add path to Rose/Cylc to your `~/.bash_profile` on JASMIN:
+{% raw %}
 ~~~
 if [[ $(hostname) = sci*.jasmin.ac.uk || $(hostname) = cylc*.jasmin.ac.uk || $(hostname) = host*.jc.rl.ac.uk ]]; then
   # Rose/cylc on jasmin-sci & Lotus nodes
   export PATH=/apps/jasmin/metomi/bin:$PATH
 fi
 ~~~
+{% endraw %}
 
 ## Jasmin transfer cache 
 
@@ -67,10 +70,11 @@ To setup an XFC space:
 
 To setup your environment for migration of data to Jasmin Elastic Tape as part of the UM workflow:
 1. Login to one of the Jasmin [sci servers](https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/)
-2. Load the jdma client: 
+2. Load the jdma client:
+{% raw %}
 ~~~
 . ~umshared/venvs/jdma_venv_py3/bin/activate
 ~~~
-
+{% endraw %}
 3. Follow the [setup steps](https://cedadev.github.io/jdma_client/docs/build/html/jdma_client/tutorial.html#setting-up-the-user-user-settings-and-user-info) in the JDMA documentation
 
