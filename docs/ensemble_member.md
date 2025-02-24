@@ -20,16 +20,17 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
      This should be the number of days since the reference time which is 1950-01-01 (using 360d calendar).
 5. Check suite settings:
    * The following code branch should **not** be included in `fcm_make_um/rose-app.conf`: 
-     ```
+     ~~~
      branches/dev/simonwilson/vn11.6_stochastic_header
-     ```
+     ~~~
      This is only required when using start dumps from an earlier UM version.
    * The suite should be set to run all tasks including the builds, pptransfer, monitor and jdma. See "suite conf → Build and Run". 
      You do not need to select "Use memory file system" or "Clear out".
      For LL "Split Post Processing App by model" should be false; and for HH it should be true. 
    * If you want cylc alerts update `webhook_url` in `bin/notify.py`, otherwise switch these off by commenting out this line in `flow.cylc`:
-     ```
+     ~~~
      #            handlers = notify.py
+     ~~~
 6. Commit your changes.
 7. Document your suite.
    * Add to the "EPOC simulations spreadsheet".
