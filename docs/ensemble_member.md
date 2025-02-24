@@ -24,7 +24,8 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
      branches/dev/simonwilson/vn11.6_stochastic_header
      ~~~
      This is only required when using start dumps from an earlier UM version.
-   * The suite should be set to run all tasks including the builds, pptransfer, monitor and jdma. See "suite conf → Build and Run". 
+   * Set jdma to **false** initially. 
+   * All other tasks should be on, including the builds, pptransfer and monitor. See "suite conf → Build and Run". 
      You do not need to select "Use memory file system" or "Clear out".
      For LL "Split Post Processing App by model" should be false; and for HH it should be true. 
    * If you want cylc alerts update `webhook_url` in `bin/notify.py`, otherwise switch these off by commenting out this line in `flow.cylc`:
@@ -35,7 +36,12 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
 7. Document your suite.
    * Add your um job id to the **Suite** column on the [EPOC simulations spreadsheet](https://docs.google.com/spreadsheets/d/11OfKzAq017yA3WrXKD8w5n_yYrWW3_bsiEujvGQDy5k/edit?gid=738210318#gid=738210318). The **Docs** and **Monitor** columns will be autofilled
    * Make a page on the EPOC github by clicking on the autofilled link in the **Docs** column
-8. Start running.
-   * You will need to run with cylc 8. Set `export CYLC_VERSION=8` on puma2.
-   * Hold the first jdma task, and the second cycle. (**I need to check how best to do this in Cylc 8**)
-   * Once the first cycle has complete, get Dan to check the data before releasing. 
+8. Run the first cycle.
+   * You will need to run with [cylc 8](https://cms.ncas.ac.uk/cylc8/). Set `export CYLC_VERSION=8` on puma2.
+   * To start the suite, run `cylc vip` from the `roses/<suite-id>` directory.
+   * Launch the tui with `cylc tui <suite-id>`.
+   * We need to manually hold the second cycle. Wait until you see the second cycle appear in the tui, then select the coupled tasks and "hold". 
+   * Once the first cycle has complete, get Dan to check the data before releasing.
+9. Continue the run when ready. 
+   * Set `JDMA` to `true`, then reload to pick up the changes with `cylc vr <suite-id>`. The jdma task should start automatically.
+   * Release the held coupled task. 
