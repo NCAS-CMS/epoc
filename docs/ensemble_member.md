@@ -33,8 +33,8 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
      ~~~
 6. Commit your changes.
 7. Document your suite.
-   * Add to the "EPOC simulations spreadsheet".
-   * Make a page on the EPOC github.
+   * Add your um job id to the **Suite** column on the [EPOC simulations spreadsheet](https://docs.google.com/spreadsheets/d/11OfKzAq017yA3WrXKD8w5n_yYrWW3_bsiEujvGQDy5k/edit?gid=738210318#gid=738210318). The **Docs** and **Monitor** columns will be autofilled
+   * Make a page on the EPOC github by clicking on the autofilled link in the **Docs** column
 8. Start running.
    * You will need to run with cylc 8. Set `export CYLC_VERSION=8` on puma2.
    * Hold the first jdma task, and the second cycle. (**I need to check how best to do this in Cylc 8**)
