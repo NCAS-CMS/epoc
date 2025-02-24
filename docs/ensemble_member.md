@@ -37,5 +37,5 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
    * Make a page on the EPOC github.
 8. Start running.
    * You will need to run with cylc 8. Set `export CYLC_VERSION=8` on puma2.
-   * Hold the first jdma task, and the second cycle. (**Let me check how best to do this in Cylc 8**)
-   * Once the first cycle has complete, get Dan to check the data before relasing. 
+   * Hold the first jdma task, and the second cycle. (**I need to check how best to do this in Cylc 8**)
+   * Once the first cycle has complete, get Dan to check the data before releasing. 
