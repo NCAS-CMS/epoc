@@ -40,8 +40,8 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
    * You will need to run with [cylc 8](https://cms.ncas.ac.uk/cylc8/). Set `export CYLC_VERSION=8` on puma2.
    * To start the suite, run `cylc vip` from the `roses/<suite-id>` directory.
    * Launch the tui with `cylc tui <suite-id>`.
-   * We need to manually hold the second cycle. Wait until you see the second cycle appear in the tui, then select the coupled tasks and "hold". 
-   * Once the first cycle has complete, get Dan to check the data before releasing.
+   * We need to manually hold the suite so it doesn't run too far ahead. Keep an eye on the suite until you see the second cycle appear in the tui, then select the `coupled` task and "hold". A pause symbol of two lines should appear next to this task. 
+   * Once the first cycle has completed, get Dan to check the data.
 9. Continue the run when ready. 
    * Set `JDMA` to `true`, then reload to pick up the changes with `cylc vr <suite-id>`. The jdma task should start automatically.
    * Release the held coupled task. 
