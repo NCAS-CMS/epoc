@@ -2,6 +2,12 @@
 
 Documentation for the EPOC runs performed on ARCHER2 by NCAS. 
 
+## Documentation related to suite running 
+
+* [Setup required to run an EPOC workflow](setup)
+* [Handling model failures](model_failures)
+* [Setting up a new ensemble member](ensemble_member)
+
 ## Experiment design 
 
 ## Production suites
@@ -30,9 +36,3 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | abrupt 4xCO2 | 1 | [u-dg290](suites/dg290) |
 | abrupt 4xCO2 | 2 | [u-di531](suites/di531) |
 | abrupt 4xCO2 | 3 | |
-
-## Documentation related to suite running 
-
-* [Setup required to run an EPOC workflow](setup)
-* [Handling model failures](model_failures)
-* [Setting up a new ensemble member](ensemble_member)
