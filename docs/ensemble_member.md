@@ -24,8 +24,7 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
      branches/dev/simonwilson/vn11.6_stochastic_header
      ~~~
      This is only required when using start dumps from an earlier UM version.
-   * Set jdma to **false** initially. 
-   * All other tasks should be on, including the builds, pptransfer and monitor. See "suite conf → Build and Run". 
+   * Ensure all tasks are switched on, including the builds, pptransfer, monitor and jdma. See "suite conf → Build and Run". 
      You do not need to select "Use memory file system" or "Clear out".
      For LL "Split Post Processing App by model" should be false; and for HH it should be true. 
    * If you want cylc alerts update `webhook_url` in `bin/notify.py`, otherwise switch these off by commenting out this line in `flow.cylc`:
@@ -42,6 +41,4 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
    * Launch the tui with `cylc tui <suite-id>`.
    * We need to manually hold the suite so it doesn't run too far ahead. Keep an eye on the suite until you see the second cycle appear in the tui, then select the `coupled` task and "hold". A pause symbol of two lines should appear next to this task. 
    * Once the first cycle has completed, get Dan to check the data.
-9. Continue the run when ready. 
-   * Set `JDMA` to `true`, then reload to pick up the changes with `cylc vr <suite-id>`. The jdma task should start automatically.
-   * Release the held coupled task. 
+9. Continue the run when ready, by releasing the held task.
