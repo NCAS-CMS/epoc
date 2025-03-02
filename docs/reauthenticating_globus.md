@@ -1,4 +1,4 @@
-# Reauthenticating your globus endpoints 
+# Reauthenticating your Globus endpoints 
 
 The Globus certificates only last for 30 days, after which you will need to reauthenticate. 
 Both the Archer2 and Jasmin endpoints can be reauthenticated from Archer2 
