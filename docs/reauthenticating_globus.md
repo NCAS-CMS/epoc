@@ -9,11 +9,12 @@ module load globus-cli
 globus session show
 ```
 This will list something like this: 
-
+```
 Username                      | ID                                   | Auth Time           
 ----------------------------- | ------------------------------------ | --------------------
-annette@safe.archer2.ac.uk    | XXX | 2025-02-14 09:10 GMT
-aosprey@accounts.jasmin.ac.uk | YYY | 2025-02-14 09:11 GMT
+annette@safe.archer2.ac.uk    | XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX | 2025-02-14 09:10 GMT
+aosprey@accounts.jasmin.ac.uk | YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY | 2025-02-14 09:11 GMT
+```
 
 To reauthenticate run e.g.: 
 ```
