@@ -8,8 +8,8 @@ In order to run an EPOC workflow, you must have the following accounts:
 You will then need to setup the following:  
 * [Archer2 and puma2 environments to run the UM](https://ncas-cms.github.io/um-training/getting-setup-selfstudy.html)
 * [Globus transfer from Archer2 to Jasmin](https://cms.ncas.ac.uk/unified-model/pptransfer-globus/) 
-* Epoc GWS access on Jasmin:
-  * Request epoc GWS access via the [Jasmin accounts portal](https://accounts.jasmin.ac.uk/).
+* alpaca GWS access on Jasmin:
+  * Request alpaca GWS access via the [Jasmin accounts portal](https://accounts.jasmin.ac.uk/).
   * Then contact Jon to be made a GWS deputy
   * Then contact the Jasmin helpdesk for tape access.
 * Cylc submission to Jasmin (see below)
