@@ -7,6 +7,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 * [Setup required to run an EPOC workflow](setup)
 * [Handling model failures](model_failures)
 * [Setting up a new ensemble member](ensemble_member)
+* [Reauthenticating your Globus endpoints](reauthenticating_globus)
 
 ## Experiment design 
 
