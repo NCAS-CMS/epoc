@@ -1,7 +1,15 @@
 # Reauthenticating your Globus endpoints 
 
 The Globus certificates only last for 30 days, after which you will need to reauthenticate. 
-Both the Archer2 and Jasmin endpoints can be reauthenticated from Archer2 
+
+## Renewing via the web app 
+
+If access has expired you can renew via the [web app](https://app.globus.org/collections). 
+In the collection box search for and select  "ARCHER2 file systems" it will then automatically tell you you need to reauthorize and provide a link to do so.  Repeat for "JASMIN Default Collection".
+
+## Renewing via Archer2 
+
+Both the Archer2 and Jasmin endpoints can also be reauthenticated from Archer2. This can be done before access expires. 
 
 You can check your linked identities with: 
 ```
