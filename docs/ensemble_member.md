@@ -1,4 +1,4 @@
-# Starting a new ensemble member 
+# Starting a new hist or 4xCO2 ensemble member 
 
 First, check with Jon and Dan for the base run to copy and the initial conditions required. 
 You should also confirm the n02 project code for Archer2 and the GWS on Jasmin. 
