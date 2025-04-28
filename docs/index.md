@@ -33,7 +33,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 |  | 3 | [u-dp388](suites/dp388) |
 |  | 4 | [u-do356](suites/do356) |
 |  | 5 | [u-do530](suites/do530) |
-| highres-future | 1 | [u-dp497](suites/dp497) |
+| highres-future-noghg | 1 | [u-dp359](suites/dp359) |
 |  | 2 | []() | 
 |  | 3 | []() | 
 |  | 4 | []() | 
