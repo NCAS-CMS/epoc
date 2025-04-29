@@ -18,7 +18,7 @@ These runs continue from the end of the hist-1950 and hist-1950-noghg ensemble m
    * Ozone data: Set `OZONE_PRIMARY_ARCHIVE` in `rose-suite.conf`. This should have the form `/work/n02/n02/annette/EPOC/u-di516/di516a.po'` with `di516` replaced by the appropriate workflow-id. 
 
 4. Set the following:
-   * `parent_variable_label` in `app/modify_netcdf_metadata/rose-app.conf`. This should include the ensemble number, e.g. `r2i1p1f1` for member 2. 
+   * `parent_variant_label` in `app/modify_netcdf_metadata/rose-app.conf`. This should include the ensemble number, e.g. `r2i1p1f1` for member 2. 
    * `ENSEMBLE_NUM` in `rose-suite.conf`
    * `ARCHER2_USERNAME` in `rose-suite.conf`
    * `TRANSFER_DIR` in `flow.cylc` to point to your XFC space.
