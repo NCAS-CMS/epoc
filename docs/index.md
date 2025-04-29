@@ -5,9 +5,13 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 ## Documentation related to suite running 
 
 * [Setup required to run an EPOC workflow](setup)
-* [Handling model failures](model_failures)
-* [Setting up a new ensemble member](ensemble_member)
 * [Reauthenticating your Globus endpoints](reauthenticating_globus)
+
+* [Starting a new hist-1950 or 4xCO2 ensemble member](ensemble_member)
+* [Starting a new highres-future ensemble member](highres_future_member)
+  
+* [Handling model failures](model_failures)
+
 
 ## Experiment design 
 
