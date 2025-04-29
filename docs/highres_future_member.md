@@ -14,7 +14,7 @@ These runs continue from the end of the hist-1950 and hist-1950-noghg ensemble m
 
 3. Set these initial conditions in the workflow: 
    * Atmos restarts: Set `astart` in `app/um/rose-app.conf`
-   * NEMO/CICE restarts: Set `CICE_START`, `NEMO_ICEBERGS_START` and `NEMO_START` in `app/nemo_cice/rose-app.conf`.
+   * NEMO/CICE restarts: Set `CICE_START`, `NEMO_ICEBERGS_START` and `NEMO_START` in `app/nemo_cice/opt/rose-app-orca1_future.conf `.
    * Ozone data: Set `OZONE_PRIMARY_ARCHIVE` in `rose-suite.conf`. This should have the form `/work/n02/n02/annette/EPOC/u-di516/di516a.po'` with `di516` replaced by the appropriate workflow-id. 
 
 4. Edit the following:
