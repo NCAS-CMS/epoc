@@ -17,14 +17,15 @@ These runs continue from the end of the hist-1950 and hist-1950-noghg ensemble m
    * NEMO/CICE restarts: Set `CICE_START`, `NEMO_ICEBERGS_START` and `NEMO_START` in `app/nemo_cice/opt/rose-app-orca1_future.conf `.
    * Ozone data: Set `OZONE_PRIMARY_ARCHIVE` in `rose-suite.conf`. This should have the form `/work/n02/n02/annette/EPOC/u-di516/di516a.po'` with `di516` replaced by the appropriate workflow-id. 
 
-4. Edit the following:
+4. Set the following:
+   * `parent_variable_label` in `app/modify_netcdf_metadata/rose-app.conf`. This should include the ensemble number, e.g. `r2i1p1f1` for member 2. 
    * `ENSEMBLE_NUM` in `rose-suite.conf`
    * `ARCHER2_USERNAME` in `rose-suite.conf`
    * `TRANSFER_DIR` in `flow.cylc` to point to your XFC space.
   
-5. Check that reconfiguration is off and that pptransfer, JDMA and monitor are all on.
+6. Check that reconfiguration is off and that pptransfer, JDMA and monitor are all on.
 
-6. Ensemble number 5 includes extra diagnostics. Copy the following files from the baseline workflow:
+7. Ensemble number 5 includes extra diagnostics. Copy the following files from the baseline workflow:
    * `app/xml/file/iodef_orca12_1m.xml`
    * `app/xml/rose-app.conf`
 
