@@ -10,7 +10,7 @@ These runs continue from the end of the hist-1950 and hist-1950-noghg ensemble m
    * highres-future : u-do964
    * highres-future-noghg : u-dp359
   
-2. Check the spreadsheet for the nitial conditions to use. The input files can be found on Archer2 under: `/work/n02/n02/annette/EPOC/<id>/`.
+2. Check the spreadsheet for the initial conditions to use. The input files can be found on Archer2 under: `/work/n02/n02/annette/EPOC/<id>/`.
 
 3. Set these initial conditions in the workflow: 
    * Atmos restarts: Set `astart` in `app/um/rose-app.conf`
@@ -22,11 +22,38 @@ These runs continue from the end of the hist-1950 and hist-1950-noghg ensemble m
    * `ARCHER2_USERNAME` in `rose-suite.conf`
    * `TRANSFER_DIR` in `flow.cylc` to point to your XFC space.
   
-5. Check that reconfiguration is off and that pptransfer, JDMA and monitor are all on. 
+5. Check that reconfiguration is off and that pptransfer, JDMA and monitor are all on.
+
+6. Ensemble number 5 includes extra diagnostics. Copy the following files from the baseline workflow:
+   * `app/xml/file/iodef_orca12_1m.xml`
+   * `app/xml/rose-app.conf`
 
 ## Running the workflow 
 
+1. Run the workflow with `cylc vip`. 
+
+2. Once the first cycle has finished, contact Dan to check the output looks OK.
+
+3. Check the correct restart files have been included. Look at `~/cylc-run/<id>/runN/log/job/20150101T0000Z/coupled/NN/job.out` and check these variables: 
+   * `CICE_START`
+   * `NEMO_START`
+   * `NEMO_ICEBERGS_START`
+   * `astart`
+
+4. Check the workflow has picked up the ozone archive. Look in `~/cylc-run/<id>/runN/log/job/20150101T0000Z/retrieve_ozone/NN/job.out` and you should see the final line: 
+```
+[INFO] Proceeding to redistribution with 24 months of data
+```
+
+5. Once you are happy that everything is working correctly, release the run with the command:
+```
+cylc release <id> --all
+``` 
+
 ## Documenting the workflow 
 
-1. Add the new suite id to the spreadsheet
-2. Add a page to github 
+1. Commit changes to the workflow.
+   
+2. Add your workflow id to the [EPOC simulations spreadsheet](https://docs.google.com/spreadsheets/d/11OfKzAq017yA3WrXKD8w5n_yYrWW3_bsiEujvGQDy5k/edit?usp=sharing)
+ 
+3. Add a page on the EPOC github site. 
