@@ -23,7 +23,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | highres-future | [u-do964](suites/do964) | []() | []() | []() | []() | 
 | hist-1950-noghg | [u-di516](suites/di516) | [u-dn997](suites/dn997) | [u-dp388](suites/dp388) | [u-do356](suites/do356) | [u-do530](suites/do530) |
 | highres-future-noghg | [u-dp359](suites/dp359) | []() | []() | []() | []() | 
-| abrupt 4xCO* | [u-dg773](suites/dg773) | [u-dh773](suites/dh773) | [u-di233](suites/di233) | [u-dj758](suites/dj758) | [u-dk751](suites/dk751) |
+| abrupt 4xCO2 | [u-dg773](suites/dg773) | [u-dh773](suites/dh773) | [u-di233](suites/di233) | [u-dj758](suites/dj758) | [u-dk751](suites/dk751) |
 
 ### HH runs
 
