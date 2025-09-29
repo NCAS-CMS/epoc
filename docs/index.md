@@ -27,11 +27,11 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 
 ### HH runs
 
-| Experiment | Ens 1 | Ens 2 | Ens 3 |
-|:--- | --- | --- | --- |
+| Experiment | Ens 1 | Ens 2 | Ens 3 | Ens 4 |
+|:--- | --- | --- | --- | --- |
 | control-1950 | [u-cx749](suites/cx749) | 
 | hist-1950 | [u-di997](suites/di997) |
 | highres-future | [u-dp361](suites/dp361) | 
 | hist-1950-noghg | [u-dj424](suites/dj424) |
 | highres-future-noghg | [u-dp497](suites/dp497) | 
-| abrupt 4xCO2 | [u-dg290](suites/dg290) | [u-di531](suites/di531) | [u-dk074](suites/dk074) |
+| abrupt 4xCO2 | [u-dg290](suites/dg290) | [u-di531](suites/di531) + [u-dr720](suites/dr720)| [u-dk074](suites/dk074) | [u-dr689](suites/dr689) |
