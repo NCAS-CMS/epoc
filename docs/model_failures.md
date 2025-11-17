@@ -46,10 +46,10 @@ Re-run the cycle with a reduced timestep in the ocean. 
 
 * In `rose-suite.conf` change the following:
 ~~~
-CLOCK=7,0,0
-UM_OPT_KEYS='... orca12_config_3min_1m'
+CLOCK=10,0,0
+UM_OPT_KEYS='... orca12_config_2min_1m'
 ~~~
-* Then `rose suite-run –reload` and re-triggger the failed task 
+* Then `cylc vr` and re-triggger the failed task 
 * Pause the coupled task in the next cycle. 
 
 Once the failed task completes successfully, revert back to the original settings: 
@@ -58,7 +58,7 @@ Once the failed task completes successfully, revert back to the original setting
 CLOCK=4,0,0
 UM_OPT_KEYS='... orca12_config_5min_1m'
 ~~~
-* Then `rose suite-run –reload` again, and re-triggger the paused task 
+* Then `cylc vr` again, and re-triggger the paused task 
 
 ## UM instability 
 
@@ -88,3 +88,20 @@ ice: Vertical thermo error
 ~~~
 
 In this case, reduce the ocean timestep (see above). 
+
+## Re-running the previous cycle 
+
+To re-run the previous cycle, you can just re-trigger the tasks, 
+and the coupled model drivers will make sure the correct restart files are in place. 
+
+If you have changed the model timestep, you will need to re-run all of the tasks including post-processing 
+and archiving to make sure the new data is saved. 
+The workflow should be set up such that data will not have gone to Jasmin tape, but if it has you will need to delete it. 
+
+From Cylc 8.6 onwards, the easiest way to re-run the cycle is to trigger all the tasks in one command, 
+and Cylc will ensure they run in order, for example: 
+~~~
+cylc trigger u-dp361 //20310801T0000Z/* 
+~~~
+Note: This will also trigger the jdma task. 
+
