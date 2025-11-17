@@ -20,10 +20,10 @@ To see which component has caused the error:
 * CICE errors appear in the `job.out`
 
 See below for instructions on getting past these instabilities. 
-These should be documented in the suite page. 
+If these solutions do not work, you will need to go back and apply the remedies to the previous cycle, 
+also documented below. 
 
-If these solutions do not work, you will need to go back and apply the remedies to the previous cycle. 
-See the [instructions for re-running the previous cycle](rerunning_cycles)
+Any interventions need to be documented in the suite page. 
 
 ## NEMO instability
 
