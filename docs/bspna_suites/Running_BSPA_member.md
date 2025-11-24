@@ -12,8 +12,7 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
    * Set the atmosphere dump.
      Edit `ainitial` in `app/um/rose-app.conf` or "um → namelist → reconfiguration and ancillary control → general technical options".
    * Set the NEMO/CICE restarts.
-     These are set in `app/nemo-cice/opt/rose-app-orca1_spunup.conf`.
-     (For HH they are set in `rose-app-orca12_spunup.conf`.)
+     These are set in `app/nemo-cice/opt/rose-app-orca12_spunup.conf`.
 4. Update the ensemble number & metadata.
    * Set `ENSEMBLE_NUM` in `rose-suite.conf` or "suite conf → template variables". 
    * Edit `branch_time_in_parent` in `app/modify_netcdf_metadata/rose-app.conf` or "modify_netcdf_metadata → model metadata → all".
