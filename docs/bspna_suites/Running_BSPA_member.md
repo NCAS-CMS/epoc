@@ -13,6 +13,8 @@ Instructions for setting up and running a new BSPNA workflow under Cylc 8.
      In the rose edit GUI this is under "suite conf &rarr; project accounting", or edit `rose-suite.conf`.
    * Set your XFC space. In `flow.cylc` change `TRANSFER_DIR`. 
 3. Update the restart files.
+   * select the correct restart dump year for this memeber from the [BSPNA simulations spreadsheet](https://docs.google.com/spreadsheets/d/1UNTNaphWJ1l3E8UryxRGrnxWaLYiY9NPnS1chptYPTA/edit?gid=738210318#gid=738210318).
+   * Restart dumps are in `/work/n02/n02/lrdlrh/BSPNA/restarts/HH`
    * Set the atmosphere dump.
      Edit `ainitial` in `app/um/rose-app.conf` or "um → namelist → reconfiguration and ancillary control → general technical options".
    * Set the NEMO/CICE restarts.
