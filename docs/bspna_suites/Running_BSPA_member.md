@@ -27,7 +27,7 @@ You should also confirm the n02 project code for Archer2 and the GWS on Jasmin.
      ~~~
 6. Commit your changes.
 7. Document your suite.
-   * Add your um job id to the **Suite** column on the [BSPNA simulations spreadsheet](https://docs.google.com/spreadsheets/d/1UNTNaphWJ1l3E8UryxRGrnxWaLYiY9NPnS1chptYPTA/edit?gid=738210318#gid=738210318. The **Docs** and **Monitor** columns will be autofilled
+   * Add your um job id to the **Suite** column on the [BSPNA simulations spreadsheet](https://docs.google.com/spreadsheets/d/1UNTNaphWJ1l3E8UryxRGrnxWaLYiY9NPnS1chptYPTA/edit?gid=738210318#gid=738210318). The **Docs** and **Monitor** columns will be autofilled
    * Make a page on the BSPNA github by clicking on the autofilled link in the **Docs** column
 8. Run the first cycle.
    * You will need to run with [cylc 8](https://cms.ncas.ac.uk/cylc8/). Set `export CYLC_VERSION=8` on puma2.
