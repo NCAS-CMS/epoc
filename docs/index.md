@@ -10,8 +10,6 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 * [Starting a new highres-future ensemble member](highres_future_member)
 * [Handling model failures](model_failures)
 
-## Experiment design 
-
 ## Production workflows
 
 ### LL runs
@@ -30,7 +28,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 | Experiment | Ens 1 | Ens 2 | Ens 3 | Ens 4 |
 |:--- | --- | --- | --- | --- |
 | control-1950 | [u-cx749](suites/cx749) | 
-| hist-1950 | [u-di997](suites/di997) |
+| hist-1950 | [u-di997](suites/di997) | [u-du798](suites/du798) |
 | highres-future | [u-dp361](suites/dp361) | 
 | hist-1950-noghg | [u-dj424](suites/dj424) |
 | highres-future-noghg | [u-dp497](suites/dp497) | 
