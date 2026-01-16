@@ -103,5 +103,7 @@ and Cylc will ensure they run in order, for example:
 ~~~
 cylc trigger u-dp361 //20310801T0000Z/* 
 ~~~
-Note: This will also trigger the jdma task. 
+Note: This will also trigger the jdma task so hold it manually. 
+
+**Important: Make sure any earlier cycles have caught up, otherwise tasks may run out of order.**
 
