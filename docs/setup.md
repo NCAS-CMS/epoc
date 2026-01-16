@@ -24,7 +24,7 @@ you need to configure your ssh settings to connect to the Jasmin sci servers.
 1\. Add the following to your `.ssh/config` file on PUMA2.
 {% raw %}
 ~~~
-Host login-0?.jasmin.ac.uk
+Host login.jasmin.ac.uk
     User <JAMSIN-USERNAME>
     IdentityFile ~/.ssh/<JASMIN-SSH-KEY>
     ForwardAgent yes
@@ -33,7 +33,7 @@ Host sci-vm-0? sci-ph-0?
     User <JASMIN-USERNAME>
     IdentityFile ~/.ssh/<JASMIN-SSH-KEY>
     ForwardAgent yes
-    ProxyJump login-03.jasmin.ac.uk
+    ProxyJump login.jasmin.ac.uk
 ~~~
 {% endraw %}
    * Replace `<JASMIN-USERNAME>` with your Jasmin username, e.g. `aosprey`.
