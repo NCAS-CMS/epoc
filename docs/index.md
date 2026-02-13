@@ -9,6 +9,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 * [Starting a new hist-1950 or 4xCO2 ensemble member](ensemble_member)
 * [Starting a new highres-future ensemble member](highres_future_member)
 * [Handling model failures](model_failures)
+* [Handling `modify_netcdf_metadata` failures](modify_netcdf_failures)
 
 ## Production workflows
 
