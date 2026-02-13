@@ -5,9 +5,7 @@ and it is not applicable to other configurations.
 Any changes to the model setup, resolution, diagnostic output etc could require rewriting this code.**
 
 Sometimes the `modify_netcdf_metadata` task will fail with a timeout or out-of-memory error. 
-You need to check what state the task left the files in, and possibly take some action. 
-
-**Do not just re-trigger**. 
+You need to check what state the task left the files in, and possibly take some action. **Do not just re-trigger**. 
 
 ## What does it do? 
 
