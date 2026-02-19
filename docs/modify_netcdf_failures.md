@@ -29,7 +29,9 @@ Loops over files, using filename pattern matching to categorise (`modify_netcdf.
 
 Try to work out what was happening when the code stopped, by looking at the code and `job.out` file. 
 In particular look out for backup files. 
-* Is the `_being_worked_on` a full and complete copy of the original? 
+* Is the `_being_worked_on` a full and complete copy of the original?
+  - Can check this by doing a diff with the same (unmodified) file from the next cycle e.g:
+    `diff <(ncdump -c dw850a_mon_u_197101-197101.nc_being_worked_on) <(ncdump -c ../19720101T0000Z/dw850a_mon_u_197201-197201.nc)`
   - If so roll back to this by moving the original out the way, then renaming the backup as original. 
 * Otherwise does the original file look OK? 
   - Then we can roll back to this by moving the backup out the way. 
