@@ -94,16 +94,18 @@ In this case, reduce the ocean timestep (see above).
 To re-run the previous cycle, you can just re-trigger the tasks, 
 and the coupled model drivers will make sure the correct restart files are in place. 
 
+**Important: Make sure any earlier cycles have caught up, otherwise tasks may run out of order.**
+
 If you have changed the model timestep, you will need to re-run all of the tasks including post-processing 
 and archiving to make sure the new data is saved. 
 The workflow should be set up such that data will not have gone to Jasmin tape, but if it has you will need to delete it. 
 
 From Cylc 8.6 onwards, the easiest way to re-run the cycle is to trigger all the tasks in one command, 
-and Cylc will ensure they run in order, for example: 
+and Cylc will ensure they run in order. When rolling back you can specify all the tasks for both cycles to keep the ordering and avoid any manual triggering: 
 ~~~
-cylc trigger u-dp361 //20310801T0000Z/* 
+cylc trigger u-dp361 //20310801T0000Z/* //20310901T0000Z/* 
 ~~~
 Note: This will also trigger the jdma task so hold it manually. 
 
-**Important: Make sure any earlier cycles have caught up, otherwise tasks may run out of order.**
+To re-run earlier cycles see: (rerunning_cycles) 
 
