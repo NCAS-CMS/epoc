@@ -51,4 +51,14 @@ Again these can be found in the log file for the original job, near the start.
 
 Go to `share/data/History_data/CICEhist`, and edit `ice.restart_file` to point to the appropriate file 
 
+### Triggering tasks 
 
+At Cylc 8 the best way to rollback to an earlier cycle is to start a new flow from the point you wish to start from. This will then run all tasks from this point onwards, e.g.:  
+```
+cylc trigger --flow=new u-dy398 21030101T0000Z/coupled
+```
+You then need to stop the old flow. To do this you need to know the flow numbers which you can see from the scheduler log or GUI. 
+```
+cylc stop --flow=1 u-dy398
+```
+You will need to tigger each task in the new cycle manually or set pre-requisites. 
