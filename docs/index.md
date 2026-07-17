@@ -11,6 +11,7 @@ Documentation for the EPOC runs performed on ARCHER2 by NCAS.
 * [Handling model failures](model_failures)
 * [Re-running earlier cycles](rerunning_cycles)
 * [Handling `modify_netcdf_metadata` failures](modify_netcdf_failures)
+* [Setup for sending CYLC error notifications to Slack channel](notify)
 
 ## Production workflows
 
