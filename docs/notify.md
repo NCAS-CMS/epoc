@@ -6,7 +6,7 @@ There are three steps to setting this up
 
 ## Turning on notifications in a Rose suite <suite-id>
 
-In `~/rose/<suite-id>/flow.cylc` under `[[[events]]]` in the `[runtime][[root]]` section add the follwing two lines:
+In `~/rose/<suite-id>/flow.cylc` under `[[[events]]]` in the `[runtime][[root]]` section add the following two lines:
 
 ~~~
            handlers = notify.py
@@ -27,7 +27,9 @@ So `[[[events]]]` should look something like:
 Then do
 
 ~~~
-cp /home4/home/n02-puma/lrdlrh/python/notify.py ~/roses/<suite-id>/bin/
+cd ~/roses/<suite-id>/bin/
+cp /home4/home/n02-puma/lrdlrh/python/notify.py .
+chmod u+x notify.py
 ~~~
 
 Then reload the cylc suite: `cylc vr <suite-id>`
@@ -60,7 +62,7 @@ Click `Add New Webhook`
 In the `Channel for webhook` box, search for the channel you created earlier (e.g `TIPMIP errors`)
 
 Click `Allow`
-This will return a page with the `Webhook URL` at the botton of the page (<SLACK-HOOK-URL>) 
+This will return a page with the `Webhook URL` at the bottom of the page (`<SLACK-HOOK-URL>`)
 
 Click `Copy` to copy this webhook URL.
 
@@ -79,7 +81,7 @@ echo "<SLACK-HOOK-URL>" >webhook
 chmod og-rwx webhook
 ~~~
 
-Where <SLACK-HOOK-URL> is the Webhook URL from the previous section.
+Where `<SLACK-HOOK-URL>` is the Webhook URL from the previous section.
 
 
 Now, any error in the rose suite should be reported directly to the new Slack channel you created.
