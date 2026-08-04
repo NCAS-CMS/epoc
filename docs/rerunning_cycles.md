@@ -57,8 +57,8 @@ At Cylc 8 the best way to rollback to an earlier cycle is to start a new flow fr
 ```
 cylc trigger --flow=new u-dy398 21030101T0000Z/coupled
 ```
-You then need to stop the old flow. To do this you need to know the flow numbers which you can see from the scheduler log or GUI. 
+Then you need to stop the old flow. To do this you need to know the flow numbers which you can see from the scheduler log or GUI. 
 ```
 cylc stop --flow=1 u-dy398
 ```
-You will need to tigger each task in the new cycle manually or set pre-requisites. 
+Finally, for this cycle you will need to tigger each task manually (or set pre-requisites), and thereafter the workflow will run automatically. 
