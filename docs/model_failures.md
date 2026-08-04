@@ -96,6 +96,8 @@ and the coupled model drivers will make sure the correct restart files are in pl
 
 **Important: Make sure any earlier cycles have caught up, otherwise tasks may run out of order.**
 
+Make sure the future coupled task is held to stop the model running on with a reduced timestep. 
+
 If you have changed the model timestep, you will need to re-run all of the tasks including post-processing 
 and archiving to make sure the new data is saved. 
 The workflow should be set up such that data will not have gone to Jasmin tape, but if it has you will need to delete it. 
