@@ -1,6 +1,6 @@
 # Re-running from an earlier cycle
 
-To re-run the previous cycle: see https://ncas-cms.github.io/epoc/model_failures#re-running-the-previous-cycle
+If you just need to go back one cycle: see [re-running the previous cycle](model_failures#re-running-the-previous-cycle)
 
 To start from an earlier point is more complicated, 
 and involves manually moving files and editing the control nanmelists. 
