@@ -50,7 +50,7 @@ CLOCK=10,0,0
 UM_OPT_KEYS='... orca12_config_2min_1m'
 ~~~
 * Then `cylc vr` and re-triggger the failed task 
-* Pause the coupled task in the next cycle. 
+* Hold the coupled task in the next cycle. 
 
 Once the failed task completes successfully, revert back to the original settings: 
 * In `rose-suite.conf`: 
