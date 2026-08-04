@@ -109,5 +109,5 @@ cylc trigger u-dp361 //20310801T0000Z/* //20310901T0000Z/*
 ~~~
 Note: This will also trigger the jdma task so hold it manually. 
 
-To re-run earlier cycles see: (rerunning_cycles) 
+To re-run from an earlier point in the workflow see: [re-running earlier cycles](rerunning_cycles)
 
